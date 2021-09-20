@@ -40,7 +40,7 @@ resource "azurerm_container_group" "jwacontainer" {
 
   container {
     name = "jumbodemoapp"
-    image = "juanlajud/jumbodemoapp:1.1"
+    image = "juanlajud/jumbodemoapp"
     cpu = "1"
     memory = "1"
 
