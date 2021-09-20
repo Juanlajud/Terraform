@@ -3,10 +3,6 @@
     features {}
   }
 
-// declaring provider version, before, I just included the version in the provider declaration, but getting a warning: 
-//"Version constraints inside provider configuration blocks are deprecated"
-// after investigation, found this new way of declaring provider version
-
 terraform {
   required_providers {
     azurerm = {
