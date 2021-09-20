@@ -16,6 +16,16 @@ terraform {
   }
 }
 
+terraform {
+  backend "azurerm" {
+        resource_group_name  = "tfstate_blob"
+        storage_account_name = "tfstatebloblajud"
+        container_name       = "tfstateblob"
+        key                  = "terraform.tfstate"
+    }
+  }
+
+
 // creating variables.tf file in order to make changes easier. using this global variables can be overriden using .tfvars file
 
 resource "azurerm_resource_group" "JWA" {
