@@ -29,7 +29,7 @@ resource "azurerm_container_group" "jwacontainer" {
   resource_group_name = azurerm_resource_group.JWA.name
 
   ip_address_type = "Public"
-  dns_name_label = "jwacontainer"
+  dns_name_label = "jwacontainerlajud"
   os_type = "Linux"
 
   container {
@@ -39,7 +39,7 @@ resource "azurerm_container_group" "jwacontainer" {
     memory = "1"
 
     ports {
-      port = 80
+      port = 5000
       protocol = "TCP"
     }
   }
