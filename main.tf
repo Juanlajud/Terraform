@@ -45,7 +45,7 @@ resource "azurerm_container_group" "jwacontainer" {
     memory = "1"
 
     ports {
-      port = 80
+      port = 8080
       protocol = "TCP"
     }
   }
