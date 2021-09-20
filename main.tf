@@ -23,6 +23,32 @@ resource "azurerm_resource_group" "JWA" {
   location = var.location
 }
 
+resource "azurerm_container_group" "jwacontainer" {
+  name                = "jwacontainergroup"
+  location            = azurerm_resource_group.JWA.location
+  resource_group_name = azurerm_resource_group.JWA.name
+
+  ip_address_type = "Public"
+  dns_name_label = "jwacontainer"
+  os_type = "Linux"
+
+  container {
+    name = "jumbodemoapp"
+    image = "juanlajud/jumbodemoapp:1.1"
+    cpu = "1"
+    memory = "1"
+
+    ports {
+      port = 80
+      protocol = "TCP"
+    }
+  }
+
+}
+
+
+/*
+
 resource "azurerm_app_service_plan" "JWA" {
   name                = var.app_srvc_plan_name
   location            = azurerm_resource_group.JWA.location
@@ -74,3 +100,4 @@ resource "azurerm_sql_database" "db" {
   server_name         = azurerm_sql_server.sqldb.name
 }
 
+*/

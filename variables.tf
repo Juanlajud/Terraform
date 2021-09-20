@@ -10,6 +10,7 @@ variable "location" {
     description = "location"
 }
 
+/*
 variable "environment" {
   type = string
   description = "Environment (test / stage / prod)"
@@ -48,3 +49,5 @@ variable "sql_admin_password" {
   type        = string
   description = "SQL Server password"
 }
+
+*/
