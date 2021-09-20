@@ -40,12 +40,12 @@ resource "azurerm_container_group" "jwacontainer" {
 
   container {
     name = "jumbodemoapp"
-    image = "juanlajud/jumbodemoapp:${var.imagebuild}"
+    image = "juanlajud/jumbodemoapp:1.1"
     cpu = "1"
     memory = "1"
 
     ports {
-      port = 5000
+      port = 80
       protocol = "TCP"
     }
   }
