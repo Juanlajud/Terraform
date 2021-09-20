@@ -9,3 +9,8 @@ variable "location" {
     type = string
     description = "location"
 }
+
+variable "imagebuild" {
+  type        = string
+  description = "Latest Image Build"
+}
